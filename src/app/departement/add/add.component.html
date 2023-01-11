@@ -1,0 +1,27 @@
+
+<div class="container">
+    <form action="" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >code departement:</label>
+            <input type="text" name="code_depart" [(ngModel)]="depart.code_depart" class="form-control" id="exampleFormControlInput1" >
+         </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >nom departement:</label>
+            <input type="text" name="nom_departement" class="form-control" id="exampleFormControlInput1" [(ngModel)]="depart.nom_departement">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">chef departement:</label>
+            <input type="text" name="chef_depart" class="form-control" id="exampleFormControlInput1" [(ngModel)]="depart.chef_depart">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">secretaire:</label>
+            <input type="text" name="secretaire" class="form-control" id="exampleFormControlInput1" [(ngModel)]="depart.secretaire">
+        </div>    
+    
+    </form>
+    <button class="btn btn-primary" (click)="ajouter()">envoyer</button>
+</div>
+
+

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 gy-4" *ngFor="let une_filiere of les_filieres">
+            <div class="card" [routerLink]="['/classe_filiere',une_filiere.id]">
+                <div class="card-body">
+                    <h2 class="card-title">{{une_filiere.code_filiere}}</h2>
+                    <p>{{une_filiere.nom_filiere}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

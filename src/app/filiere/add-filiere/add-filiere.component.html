@@ -1,0 +1,26 @@
+
+<div class="container">
+    <form  method="post" #filiereForm="ngForm" >
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >code filiere:</label>
+            <input type="text" name="code_filiere"  class="form-control" id="exampleFormControlInput1" [(ngModel)]="filiere.code_filiere">
+         </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >nom filiere:</label>
+            <input type="text" name="nom_filiere" class="form-control" id="exampleFormControlInput1" [(ngModel)]="filiere.nom_filiere">
+        </div>
+        <div class="mb-3" >
+            <label for="exampleFormControlInput1" class="form-label" >departement</label>
+            <select name="id_departement" id="" [(ngModel)]="filiere.id_departement" class="form-control"> 
+                <option *ngFor="let un_departement of les_departements" [value]="un_departement.id">
+                    {{un_departement.nom_departement}}
+                </option>
+            </select>
+        </div>
+
+        <button type="button" (click)="onSubmitForm(filiereForm)" class="btn btn-primary">envoyer</button>
+    
+    </form>
+</div>
+
+

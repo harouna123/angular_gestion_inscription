@@ -1,0 +1,27 @@
+<div class="container">
+    <form action="" method="post">
+        <div class="mb-3">
+            <label for="code_classe" class="form-label">code classe</label>
+            <input type="text" name="code_classe" class="form-control" [(ngModel)]="classe.code_classe">
+
+        </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">nom classe</label>
+            <input type="text" name="nom" class="form-control" [(ngModel)]="classe.nom">
+        </div>
+
+        <div class="mb-3">
+            <label for="nom" class="form-label">nom filiere</label>
+            <select name="id_filiere" id="" [(ngModel)]="classe.id_filiere" class="form-control">
+                <option *ngFor="let une_filiere of les_filieres" [value]="une_filiere.id">
+                    {{une_filiere.nom}}
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" (click)="ajouter()" >envoyer</button>
+        </div>
+
+    </form>
+
+</div>

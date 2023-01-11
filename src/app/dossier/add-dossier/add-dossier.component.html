@@ -1,0 +1,90 @@
+
+<div class="container">
+    <form action="" method="post">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >nom departement:</label>
+            <input type="text" name="nom_departement" class="form-control" id="exampleFormControlInput1" disabled [ngModel]="dossiers.nom_departement" >
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">nom filiere:</label>
+            <input type="text" name="nom_filiere" class="form-control" id="exampleFormControlInput1" disabled [ngModel]="dossiers.nom_filiere">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">nom classe:</label>
+            <input type="text" name="nom" class="form-control" id="exampleFormControlInput1" disabled [ngModel]="dossiers.nom">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">id:</label>
+            <input type="text" name="id" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.id">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">nom candidat:</label>
+            <input type="text" name="nom_candidat" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.nom_candidat">
+        </div> 
+
+
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">prenom candidat:</label>
+            <input type="text" name="prenom_candidat" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.prenom_candidat">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">sexe:</label>
+            <select name="sexe" id="exampleFormControlInput1" class="form-control" [ngModel]="dossiers.sexe">
+                <option disabled value="">.......</option>
+                <option value="masculin">masculin</option>
+                <option value="feminin">feminin</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">naissance:</label>
+            <input type="date" name="naissance" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.naissance">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">adresse:</label>
+            <input type="text" name="adresse" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.adresse">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">nationalite:</label>
+            <input type="text" name="nationalite" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.nationalite">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">email:</label>
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.email">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">telephone:</label>
+            <input type="text" name="telephone" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.telephone">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">ecole d'origine:</label>
+            <input type="text" name="ecole_dorigine" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.ecole_dorigine">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">diplome:</label>
+            <input type="text" name="diplome_obtenu" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.diplome_obtenu">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">date obtention:</label>
+            <input type="date" name="date_obtention" class="form-control" id="exampleFormControlInput1"  [ngModel]="dossiers.date_obtention">
+        </div>
+    
+    </form>
+    <button class="btn btn-primary" (click)="ajouter()">envoyer</button>
+</div>
+
+

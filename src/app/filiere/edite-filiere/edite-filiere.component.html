@@ -1,0 +1,26 @@
+<div class="container">
+    <form action="" method="post">
+        <div class="mb-3">
+            <label for="code_filiere" class="form-label">code filiere</label>
+            <input type="text" name="code_filiere" class="form-control" [(ngModel)]="filiere.code_filiere">
+        </div>
+
+        <div class="mb-3">
+            <label for="nom" class="form-label">nom filiere</label>
+            <input type="text" name="nom" class="form-control" [(ngModel)]="filiere.nom">
+        </div>
+
+        <div class="mb-3">
+            <label for="id_departement" class="form-label">nom departement</label>
+            <select name="id_departement" id="id_departement" class="form-control" [(ngModel)]="filiere.id_departement">
+                <option *ngFor="let un_departement of les_departements" [value]="un_departement.id">
+                    {{un_departement.nom}}
+                </option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <button (click)="update()" class="btn btn-primary">modifier</button>
+        </div>
+    </form>
+</div>

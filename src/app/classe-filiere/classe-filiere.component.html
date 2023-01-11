@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 gy-4" *ngFor="let une_classe of les_classes">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">{{une_classe.code_classe}}</h2>
+                    <p>{{une_classe.nom}}</p> 
+                    <a [routerLink]="['/add_dossier',une_classe.id]" class="btn btn-success">postuler</a>     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3 gy-4" *ngFor="let un_departement of departements">         
+                    <div class="card" [routerLink]="['/filiere_departement',un_departement.id]">
+                        <!--<img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title ">{{un_departement.code_depart}}</h5>
+                            <p>{{un_departement.nom_departement}}</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  
