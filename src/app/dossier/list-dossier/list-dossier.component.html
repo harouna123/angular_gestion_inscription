@@ -1,1 +1,25 @@
-<p>list-dossier works!</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3 gy-4" *ngFor="let un_dossier of getDossier">
+            <div class="card" >
+                <!--<img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title ">{{un_dossier.nom_departement}}</h5>
+                    <P>{{un_dossier.nom_filiere}}</P>
+                    <P>{{un_dossier.nom}}</P>
+                    <P>{{un_dossier.prenom_candidat}} {{un_dossier.nom_candidat}}</P>
+                    <P>date de naissance: {{un_dossier.naissance}}</P>
+                    <P>sexe: {{un_dossier.sexe}}</P>
+                    <P>email: {{un_dossier.email}}</P>
+                    <P>telephone: {{un_dossier.telephone}}</P>
+                    <P>diplomme obtenu: {{un_dossier.diplome_obtenu}}</P>
+                    <P>date obtention: {{un_dossier.date_obtention}}</P>
+                    <P>ecole d'origine: {{un_dossier.ecole_dorigine}}</P>
+                    <P>statut: {{un_dossier.statut}}</P>
+                    <a  class="btn btn-primary me-2" [routerLink]="['/edit_dossier',un_dossier.id]" > modifier</a>
+                    <a  class="btn btn-danger ms-2" > rejeter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

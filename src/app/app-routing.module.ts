@@ -8,6 +8,7 @@ import { AddComponent } from './departement/add/add.component';
 import { EditComponent } from './departement/edit/edit.component';
 import { ListeComponent } from './departement/liste/liste.component';
 import { AddDossierComponent } from './dossier/add-dossier/add-dossier.component';
+import { EditDossierComponent } from './dossier/edit-dossier/edit-dossier.component';
 import { ListDossierComponent } from './dossier/list-dossier/list-dossier.component';
 import { FiliereDepartementComponent } from './filiere-departement/filiere-departement.component';
 import { AddFiliereComponent } from './filiere/add-filiere/add-filiere.component';
@@ -27,7 +28,9 @@ const routes: Routes = [
   {path:'add_classe',component:AddClasseComponent},
   {path:'liste_classe',component:ListeClasseComponent},
   {path:'add_dossier/:id_classe',component:AddDossierComponent},
-  {path:'liste_dossier',component:ListDossierComponent}
+  {path:'liste_dossier',component:ListDossierComponent},
+  {path:'edit_dossier/:id_dossier',component:EditDossierComponent}
+
  
 ];
 

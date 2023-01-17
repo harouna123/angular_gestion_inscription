@@ -15,7 +15,7 @@ export class AddClasseComponent implements OnInit {
   }
   constructor(private http:HttpClient) { }
 
-  les_filieres:{id:number, code_filiere:string,nom:string,id_departement:number}[]=[]
+  les_filieres:{id:number, code_filiere:string,nom_filiere:string,id_departement:number}[]=[]
 
   ngOnInit(): void {
     this.listFiliere()

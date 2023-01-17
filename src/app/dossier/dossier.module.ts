@@ -4,6 +4,7 @@ import { AddDossierComponent } from './add-dossier/add-dossier.component';
 import { EditDossierComponent } from './edit-dossier/edit-dossier.component';
 import { ListDossierComponent } from './list-dossier/list-dossier.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -15,7 +16,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
+
   ]
 })
 export class DossierModule { }

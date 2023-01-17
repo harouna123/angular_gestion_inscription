@@ -14,7 +14,7 @@
             <label for="nom" class="form-label">nom filiere</label>
             <select name="id_filiere" id="" [(ngModel)]="classe.id_filiere" class="form-control">
                 <option *ngFor="let une_filiere of les_filieres" [value]="une_filiere.id">
-                    {{une_filiere.nom}}
+                    {{une_filiere.nom_filiere}}
                 </option>
             </select>
         </div>

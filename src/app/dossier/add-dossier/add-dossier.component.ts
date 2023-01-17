@@ -10,18 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 export class AddDossierComponent implements OnInit {
 
   id:number = 0
-  constructor(private id_classe:ActivatedRoute,private http:HttpClient) {
-    id_classe.params.subscribe((params:any)=>{
-      this.id = params["id_classe"]
-    })
-  
-   }
-     
-  dossiers:{id:number,nom:string,nom_departement:string,nom_filiere:string,nom_candidat:string,prenom_candidat:string,sexe:string,naissance:Date,adresse:string,nationalite:string,email:string,telephone:string,ecole_dorigine:string,diplome_obtenu:string,date_obtention:Date}={
-    id:0,
-    nom:"",
-    nom_departement:"",
-    nom_filiere:"",
+
+  getFilDepart!:{id:number,nom_departement:string,code_depart:string,code_filiere:string,nom_filiere:string,code_classe:string}
+
+  dossiers:{id_classe:number,nom_candidat:string,prenom_candidat:string,sexe:string,naissance:Date,adresse:string,nationalite:string,email:string,telephone:string,ecole_dorigine:string,diplome_obtenu:string,date_obtention:Date}={
+    id_classe:this.id,
     nom_candidat:"",
     prenom_candidat:"",
     sexe:"",
@@ -35,11 +28,25 @@ export class AddDossierComponent implements OnInit {
     date_obtention:new Date()
 
   }
+
+  constructor(private id_classe:ActivatedRoute,private http:HttpClient) {
+    id_classe.params.subscribe((params:any)=>{
+      this.id = params["id_classe"]
+      this.dossiers.id_classe = this.id
+    })
+  
+   }
+  
+  
+
+
   
   ajouter(){
     this.http.post("http://localhost/gestion_inscription/dossier/ajouter.php",this.dossiers)
     .subscribe((reponse:any)=>{
       console.log("reponse ajouter",reponse)
+      
+
     })
   }
 
@@ -47,11 +54,12 @@ export class AddDossierComponent implements OnInit {
     this.getFiliereDepartement()
   }
 
+
   getFiliereDepartement(){
     this.http.get("http://localhost/gestion_inscription/getFiliereDepartement.php?id="+this.id)
     .subscribe((reponse:any)=>{
-      this.dossiers = reponse
-      console.log("reponse du backend filiere_departements",this.dossiers)
+      this.getFilDepart = reponse
+      console.log("reponse du backend filiere_departements",this.getFilDepart)
 
     })
   }
